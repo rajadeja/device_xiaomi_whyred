@@ -1,1 +1,1 @@
-add_lunch_combo arrow_whyred-userdebug
+add_lunch_combo potato_whyred-userdebug

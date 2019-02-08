@@ -26,9 +26,9 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit some common ArrowOS stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
-PRODUCT_NAME := potato_whyred
+PRODUCT_NAME := bootleg_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -39,7 +39,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="whyred" \
     PRODUCT_NAME="whyred" \
-    BUILD_FINGERPRINT="xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V10.2.2.0.OEICNXM:user/release-keys" \
-    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V10.2.2.0.OEICNXM release-keys"
+    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V10.2.2.0.OEICNXM release-keys" \
+    DEVICE_MAINTAINERS=" Raj | Adi "
+
+BUILD_FINGERPRINT := xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
 
 TARGET_VENDOR := Xiaomi

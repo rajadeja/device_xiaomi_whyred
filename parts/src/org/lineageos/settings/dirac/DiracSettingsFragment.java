@@ -56,7 +56,6 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.dirac_settings);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -71,15 +70,6 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mPreset = (ListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
         mPreset.setEnabled(enhancerEnabled);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = LayoutInflater.from(getContext()).inflate(R.layout.dirac,
-                container, false);
-        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
-        return view;
     }
 
     @Override
